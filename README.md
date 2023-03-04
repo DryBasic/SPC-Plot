@@ -54,7 +54,7 @@ Generating plots:
 
 ```
 chart.draw_scatter(plot_layout='light')
-chart.draw_spc_zones()
+chart.draw_spc_zones(color='classic')
 chart.draw_lines(show_value=True, line_style='light')
 chart.draw_violations()
 
@@ -62,6 +62,29 @@ chart.fig
 >>
 ```
 ![plot](readme_refs/basic_demo.png)
+
+Process Capability & Violations
+```
+chart.capability()
+>>
+{'mean': 4.100625000000001,
+ 'LCL': 3.99137185359222,
+ 'UCL': 4.209878146407782,
+ 'Process Width': 0.21850629281556166,
+ 'LSL': 4.05,
+ 'USL': 4.15,
+ 'Spec Width': 0.10000000000000053,
+ 'Cp Lower': 0.4633733825023789,
+ 'Cp Upper': 0.4519320644158867,
+ 'Cp': 0.45765272345913277}
+ 
+ chart.violations
+ >>
+ 4    [1]
+Name: violations, dtype: object
+```
+The violations attribute is a `pandas.Series` object with the violating record's
+index pointing to a list of the rules violated.
 
 ***
 
