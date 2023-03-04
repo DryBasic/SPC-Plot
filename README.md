@@ -61,7 +61,7 @@ chart.draw_violations()
 chart.fig
 >>
 ```
-![plot](https://github.com/DryBasic/SPC-Plot/main/readme_refs/basic_demo.png?raw=true)
+![plot](readme_refs/basic_demo.png)
 
 ***
 
