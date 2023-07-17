@@ -3,12 +3,9 @@ Class to build statistical process control charts using `plotly graph_objs`.
 
 ***
 
-The current implementation of this project revolves around specifying custom styles in the config file. 
-While I'd like to turn this into a package of its own, the first implementation of this class was as a module
-in a `streamlit` dashboard, hence the chosen file structure.
+Package still in development, but usable as is
 
-Additionally, the `AnomalyDetector` was pasted from [this project](https://github.com/omerfarukozturk/AnomalyDetection) 
-with some minor logic changes.
+Additionally, the `AnomalyDetector` was modified from [this project](https://github.com/omerfarukozturk/AnomalyDetection).
 
 ***
 
@@ -53,9 +50,9 @@ chart.LCL, chart.mean, chart.UCL
 Generating plots:
 
 ```
-chart.draw_scatter(plot_layout='light')
-chart.draw_spc_zones(color='classic')
-chart.draw_lines(show_value=True, line_style='light')
+chart.draw_scatter()
+chart.draw_spc_zones()
+chart.draw_lines(show_value=True)
 chart.draw_violations()
 
 chart.fig
@@ -63,7 +60,7 @@ chart.fig
 ```
 ![plot](readme_refs/basic_demo.png)
 
-Process Capability & Violations
+Process Capability & Violations (Functionality not tested in recent update, may be broken)
 ```
 chart.capability()
 >>
@@ -85,10 +82,3 @@ Name: violations, dtype: object
 ```
 The violations attribute is a `pandas.Series` object with the violating record's
 index pointing to a list of the rules violated.
-
-***
-
-### Known Bugs
-
-- Default hover labels duplicate the specified "y"
-- Default hover label for control violations has values offset from their labels
