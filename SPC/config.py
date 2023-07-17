@@ -63,27 +63,6 @@ SHAPE_LAYOUT = {
     },
 }
 
-CUSTOMDATA = {
-    'generic': [
-        'OrderNumber',
-        'MaterialNumber',
-        'StartDate',
-        'EndDate'
-    ],
-    'violation': '',
-}
-
-HOVERTEMPLATE = {
-    'generic': '<br>'.join([
-                'y-value: %{y:.2f}',
-                'Lot: %{customdata[0]}',
-                'MN: %{customdata[1]}',
-                'MFG Start: %{customdata[2]}',
-                'MFG End: %{customdata[3]}'
-            ]),
-    'violation': '',
-}
-
 COLOR_SCHEME = {
     'Classic': {
         'zone0': '#B8EEBE',
